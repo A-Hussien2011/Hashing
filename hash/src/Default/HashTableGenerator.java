@@ -21,7 +21,11 @@ public class HashTableGenerator {
 		    }           
 		}
 	}
-	
+
+    public int getIndex(int key) {
+        return 0;
+    }
+
 	public int[] generateKey(int number){
 		int[] binkey = generateBinaryKey(number);
 		int[] key = new int[hashFn.length];

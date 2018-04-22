@@ -1,33 +1,27 @@
 /**
- * 
+ *
  */
 package Default;
 
 /**
  * @author a7med
- *
  */
 public class NSquaredHash implements IHash {
-	HashTableGenerator hash;
-	public NSquaredHash(int n){
-		hash = new HashTableGenerator(n);
-		hash.generateHashFn();
-	}
-	@Override
-	public boolean search(int value) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-	@Override
-	public boolean insert(int value) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-	@Override
-	public boolean delete(int value) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-	
-	
+
+    private final int[] keys;
+    //TODO: Change the type of the hashTable if preferred
+    private int[] hashTable;
+    private HashTableGenerator hash;
+
+    public NSquaredHash(int[] keys) {
+        this.keys = keys;
+        hash = new HashTableGenerator(keys.length);
+        hash.generateHashFn();
+        this.hashTable = new int[keys.length * keys.length];
+    }
+
+    @Override
+    public boolean search(int key) {
+        return false;
+    }
 }
