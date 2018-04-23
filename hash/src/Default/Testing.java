@@ -3,12 +3,9 @@ package Default;
 public class Testing {
 
 	public static void main(String[] args) {
-		HashTableGenerator hash = new HashTableGenerator(2);
-		hash.generateHashFn();
-		printarr2d(hash.hashFn);
-		//printarr(hash.generateBinaryKey(15));
-		printarr(hash.generateKey(15));
-		
+		int[] key = {1,8,9,15};
+		QuadraticHash q = new QuadraticHash(key);
+		System.out.println(q.search(14));
 	}
 	
 	public static void printarr2d(int [][] matrix){
@@ -19,9 +16,9 @@ public class Testing {
 		    System.out.print("\n");
 		}
 	}
-	public static void printarr(int[] arr){
+	public static void printarr(QuadraticNode[] arr){
 		for(int i = 0; i < arr.length; i++){
-			System.out.println(arr[i]);
+			System.out.println(arr[i].getValue());
 		}
 	}
 

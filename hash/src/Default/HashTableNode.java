@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class HashTableNode {
     private int numberOfElements;
     private boolean hasCollision;
-    private NSquaredHash collisionHashTable;
+    private QuadraticHash collisionHashTable;
     private ArrayList<Integer> tempContainer;
     private boolean isStable;
     private int singleKey;
@@ -58,7 +58,7 @@ public class HashTableNode {
                 keys[i] = tempContainer.get(i);
             }
 
-            this.collisionHashTable = new NSquaredHash(keys);
+            this.collisionHashTable = new QuadraticHash(keys);
         } else if (numberOfElements == 1) {
             singleKey = tempContainer.get(0);
         }
