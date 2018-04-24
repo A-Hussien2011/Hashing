@@ -30,10 +30,9 @@ public class QuadraticHash implements IHash {
         this.hashTable = new QuadraticNode[keys.length * keys.length];
         this.buildHashTable(keys);
     }
-    
-    
-    
-    private void buildHashTable(int[] keys) {
+
+
+	private void buildHashTable(int[] keys) {
     	boolean noCollision = insertKeys(keys);
     	while(!noCollision){
     		hash.generateHashFn();
